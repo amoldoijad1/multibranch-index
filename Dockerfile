@@ -6,6 +6,7 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache.conf
 RUN service apache2 restart
 
 COPY index.html /var/www/html
+RUN cd /var/www/html && chmod 655 index.html
 
 EXPOSE 80
 
