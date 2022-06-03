@@ -1,5 +1,13 @@
 pipeline {
-	agent any
+
+      agent {
+	  
+	  node {
+	        
+			label "built-in"
+			customWorkspace "/mnt/project"
+			}
+			}
 	  stages {
 	    stage ('docker-container')
                    {
